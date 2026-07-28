@@ -41,7 +41,7 @@ def update_task(tasks: list, task_id: int, new_text: str) -> bool:
     for task in tasks:
         if task["id"] == task_id:
             task["task"] = new_text
-            task["updatedAT"] = time.ctime()
+            task["updatedAt"] = time.ctime()
             return True
     return False
 
@@ -58,7 +58,7 @@ def mark_task(tasks: list, status: str, task_id: int) -> bool:
     for task in tasks:
         if task["id"] == task_id:
             task["status"] = status
-            task["updatedAT"] = time.ctime()
+            task["updatedAt"] = time.ctime()
             return True
     return False
     
