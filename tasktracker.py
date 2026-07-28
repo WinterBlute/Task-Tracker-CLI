@@ -141,7 +141,7 @@ def main():
                     print("No tasks found.")
                     continue
                 for x in current_list:
-                    print(x['id'], x['task'], x['status'], 'Created:', x['createdAt'], 'Updated:', x['updatedAt'])
+                    print(f"{x['id']} {x['task']} {x['status']} Created: {x['createdAt']} 'Updated: {x['updatedAt']}")
             elif len(command) == 2:
                 task_filter = command[1].lower()
                 if task_filter not in VALID_STATUSES:
@@ -149,7 +149,7 @@ def main():
                     continue
                 for x in current_list:
                     if x['status'] == task_filter:
-                        print(x['id'], x['task'], x['status'], 'Created:', x['createdAt'], 'Last updated:', x['updatedAt'])
+                        print(f"{x['id']} {x['task']} {x['status']} Created: {x['createdAt']} 'Updated: {x['updatedAt']}")
             else:
                 print('List command not recognized')
         else:
