@@ -81,6 +81,7 @@ def main():
             task = add(" ".join(command[1:]), next_task_id(current_list))
             current_list.append(task)
             save_tasks(current_list)
+            print("Task added successfully")
         elif action == "clear":
             current_list = []
             save_tasks(current_list)
